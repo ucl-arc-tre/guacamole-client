@@ -25,10 +25,10 @@
 # such as `--build-arg TOMCAT_JRE=jre8-alpine`
 #
 ARG TOMCAT_VERSION=8.5
-ARG TOMCAT_JRE=jdk8
+ARG TOMCAT_JRE=jdk11
 
 # Use official maven image for the build
-FROM maven:3-eclipse-temurin-8-focal AS builder
+FROM maven:3-eclipse-temurin-11-focal AS builder
 
 # Use Mozilla's Firefox PPA (newer Ubuntu lacks a "firefox-esr" package and
 # provides only a transitional "firefox" package that actually requires Snap
