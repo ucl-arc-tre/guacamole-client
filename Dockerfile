@@ -73,6 +73,9 @@ RUN /opt/guacamole/bin/build-guacamole.sh "$BUILD_DIR" /opt/guacamole
 
 RUN rm -rf /opt/guacamole/build.d /opt/guacamole/bin/build-guacamole.sh
 
+# Remove non-required extensions
+RUN rm  -rf extensions/guacamole-auth-duo
+
 # For the runtime image, we start with the official Tomcat distribution
 FROM tomcat:${TOMCAT_VERSION}-${TOMCAT_JRE}
 
