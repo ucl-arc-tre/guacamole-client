@@ -205,7 +205,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
@@ -299,14 +298,14 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.37</version>
+            <version>7.0.76</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-coyote</artifactId>
-            <version>7.0.37</version>
+            <version>7.0.76</version>
             <scope>provided</scope>
         </dependency>
 
