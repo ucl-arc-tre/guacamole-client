@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y firefox
 # argument will be provided to explicitly unskip any skipped tests. To, for
 # example, allow the building of the RADIUS auth extension, pass a build profile
 # as well: `--build-arg MAVEN_ARGUMENTS="-P lgpl-extensions -DskipTests=false"`.
-ARG MAVEN_ARGUMENTS="-DskipTests=false"
+ARG MAVEN_ARGUMENTS="-DskipTests=false -e"
 
 # Versions of JDBC drivers to bundle within image
 ARG MSSQL_JDBC_VERSION=9.4.1
@@ -56,8 +56,8 @@ ARG MYSQL_JDBC_VERSION=8.3.0
 ARG PGSQL_JDBC_VERSION=42.7.2
 
 # Build environment variables
-ENV \
-    BUILD_DIR=/tmp/guacamole-docker-BUILD
+ENV BUILD_DIR=/tmp/guacamole-docker-BUILD \
+    IGNORE_LICENSE_ERRORS=true
 
 # Add configuration scripts
 COPY guacamole-docker/bin/ /opt/guacamole/bin/
