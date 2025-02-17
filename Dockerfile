@@ -56,8 +56,8 @@ ARG MYSQL_JDBC_VERSION=8.3.0
 ARG PGSQL_JDBC_VERSION=42.7.2
 
 # Build environment variables
-ENV BUILD_DIR=/tmp/guacamole-docker-BUILD \
-    IGNORE_LICENSE_ERRORS=true
+ENV \
+    BUILD_DIR=/tmp/guacamole-docker-BUILD
 
 # Add configuration scripts
 COPY guacamole-docker/bin/ /opt/guacamole/bin/
