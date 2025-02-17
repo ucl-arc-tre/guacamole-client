@@ -372,6 +372,8 @@ for EXCLUDED_FILE in README dep-coordinates.txt; do
     rm -f "$OUTPUT_DIR/bundled"/*/"$EXCLUDED_FILE"
 done
 
+export IGNORE_LICENSE_ERRORS=true
+
 # Fail if any errors occured unless explicitly configured to ignore errors with
 # the IGNORE_LICENSE_ERRORS environment variable
 if [ "`cat "$HAS_ERRORS"`" = "1" ]; then

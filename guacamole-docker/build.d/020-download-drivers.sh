@@ -82,18 +82,7 @@ download_driver() {
 # Download and link any required JDBC drivers
 #
 
-# MySQL JDBC driver
-download_driver "MYSQL_" \
-    "https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-$MYSQL_JDBC_VERSION.tar.gz" \
-    "mysql-jdbc.jar"
-
 # PostgreSQL JDBC driver
 download_driver "POSTGRESQL_" \
     "https://jdbc.postgresql.org/download/postgresql-$PGSQL_JDBC_VERSION.jar" \
     "postgresql-jdbc.jar"
-
-# SQL Server JDBC driver
-download_driver "SQLSERVER_" \
-    "https://github.com/microsoft/mssql-jdbc/releases/download/v$MSSQL_JDBC_VERSION/mssql-jdbc-$MSSQL_JDBC_VERSION.jre8.jar" \
-    "mssql-jdbc.jar"
-
