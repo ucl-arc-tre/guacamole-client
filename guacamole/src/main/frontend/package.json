@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --progress"
+        "build": "webpack --progress"
     },
     "dependencies": {
         "@simonwep/pickr": "^1.8.2",
