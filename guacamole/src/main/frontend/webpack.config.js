@@ -100,7 +100,7 @@ module.exports = {
                 languageIn: 'ECMASCRIPT_2020',
                 languageOut: 'ECMASCRIPT5',
                 compilationLevel: 'SIMPLE',
-                strict_mode_input: 'false'
+                strict_mode_input: 'false' // required otherwise: 'closure-compiler: "arguments.callee" cannot be used in strict mode'
             }),
 
             new CssMinimizerPlugin()
