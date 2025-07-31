@@ -12,6 +12,10 @@
                 {
                     "name"  : "port",
                     "type"  : "NUMERIC"
+                },
+                {
+                    "name"  : "timeout",
+                    "type"  : "NUMERIC"
                 }
             ]
         },
@@ -100,6 +104,7 @@
                     "type"    : "ENUM",
                     "options" : [
                         "",
+                        "cs-cz-qwertz",
                         "de-ch-qwertz",
                         "de-de-qwertz",
                         "en-gb-qwerty",
@@ -421,6 +426,10 @@
                     "type"  : "NUMERIC"
                 },
                 {
+                    "name"  : "sftp-timeout",
+                    "type"  : "NUMERIC"
+                },
+                {
                     "name"  : "sftp-host-key",
                     "type"  : "TEXT"
                 },
@@ -439,6 +448,10 @@
                 {
                     "name"  : "sftp-passphrase",
                     "type"  : "PASSWORD"
+                },
+                {
+                    "name"  : "sftp-public-key",
+                    "type"  : "MULTILINE"
                 },
                 {
                     "name"  : "sftp-root-directory",

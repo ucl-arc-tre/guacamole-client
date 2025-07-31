@@ -301,6 +301,6 @@ public class MySQLGuacamoleProperties {
         @Override
         public String getName() { return "mysql-batch-size"; }
 
-    };    
+    };
     
 }
