@@ -27,8 +27,9 @@
 ARG TOMCAT_VERSION=9.0.121
 ARG TOMCAT_JRE=jdk21
 
-# Use official maven image for the build
-FROM maven:3-eclipse-temurin-21 AS builder
+# Build Java archives and JavaScript on the native builder architecture so
+# Firefox tests do not run under emulation when targeting another platform.
+FROM --platform=$BUILDPLATFORM maven:3-eclipse-temurin-21 AS builder
 
 # Use Mozilla's Firefox PPA (newer Ubuntu lacks a "firefox-esr" package and
 # provides only a transitional "firefox" package that actually requires Snap
